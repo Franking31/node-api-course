@@ -29,7 +29,7 @@ async function router(req, res) {
   if (method === "GET" && pathname === "/books") {
     const db = await readDB();
 
-    // Bonus: filtrage par disponibilité ?available=true/false
+    // Bonus filtrage par disponibilité 
     const availableParam = urlObj.searchParams.get("available");
     let books = db.books;
     if (availableParam !== null) {
@@ -61,7 +61,7 @@ async function router(req, res) {
     if (!title || !author || !year) {
       return sendJSON(res, 400, {
         success: false,
-        error: "Les champs title, author et year sont requis",
+        error: "Les champs titre, auteur et annee sont requis",
       });
     }
 
