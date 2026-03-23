@@ -19,15 +19,15 @@ const authenticate = require("../middlewares/authenticate");
  *             properties:
  *               nom:
  *                 type: string
- *                 example: Jean Dupont
+ *                 example: Frank Pange
  *               email:
  *                 type: string
  *                 format: email
- *                 example: jean@example.com
+ *                 example: Frank@example.com
  *               password:
  *                 type: string
  *                 minLength: 8
- *                 example: motdepasse123
+ *                 example: 12345678
  *     responses:
  *       201:
  *         description: Utilisateur créé avec succès
@@ -69,7 +69,7 @@ router.post("/register", authController.register);
  *               email:
  *                 type: string
  *                 format: email
- *                 example: admin@library.com
+ *                 example: admin@gmail.com
  *               password:
  *                 type: string
  *                 example: admin1234
