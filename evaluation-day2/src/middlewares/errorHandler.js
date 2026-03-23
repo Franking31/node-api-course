@@ -1,7 +1,7 @@
 function errorHandler(err, req, res, next) {
   console.error(`[ERROR] ${err.message}`);
 
-  // Erreurs Zod
+  // Erreurs Zod 
   if (err.name === "ZodError") {
     return res.status(400).json({
       success: false,
@@ -10,7 +10,7 @@ function errorHandler(err, req, res, next) {
     });
   }
 
-  // Erreurs Prisma - unicite
+  // Erreurs Prisma - unicite 
   if (err.code === "P2002") {
     return res.status(409).json({ success: false, error: "Cette valeur existe deja" });
   }

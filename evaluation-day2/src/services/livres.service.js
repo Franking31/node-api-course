@@ -77,4 +77,4 @@ async function retourner(livreId, userId) {
   return empruntMaj;
 }
 
-module.exports = { getAll, getById, create, update, remove, emprunter, retourner };
+module.exports = { getAll, getById, create, update, remove, emprunter, retourner }; 

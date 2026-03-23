@@ -54,7 +54,7 @@ async function login(data) {
 
   const { password, ...userWithoutPassword } = user;
   const token = generateToken(user.id);
-  return { user: userWithoutPassword, token };
+  return { user: userWithoutPassword, token }; 
 }
 
 module.exports = { register, login };

@@ -7,6 +7,7 @@ async function getAll(req, res, next) {
   } catch (err) { next(err); }
 }
 
+
 async function getById(req, res, next) {
   try {
     const livre = await livresService.getById(parseInt(req.params.id));
